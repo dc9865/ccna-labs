@@ -18,7 +18,7 @@ This lab demonstrates the configuration of Layer 2 and Layer 3 EtherChannels usi
 ## 🗺️ Topology Summary
 - Access Switches: ASW1, ASW2  
 - Distribution Switches: DSW1, DSW2  
-- End hosts and SVI IP addresses are pre-configured  
+- End hosts IP addresses are pre-configured  
 - Multiple physical links exist between switch pairs  
 
 ---
