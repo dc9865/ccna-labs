@@ -16,9 +16,9 @@ This lab examines Rapid Spanning Tree Protocol (RSTP) behavior in a multi-switch
 ---
 
 ## Root Bridge
-Root Bridge: **SW1**
-Verified with: 'show spanning-tree'
-Reason: All switches have default priority; SW1 has the lowest MAC address.
+- Root Bridge: **SW1**
+- Verified with: 'show spanning-tree'
+- Reason: All switches have default priority; SW1 has the lowest MAC address.
 
 ---
 
@@ -32,10 +32,10 @@ Reason: All switches have default priority; SW1 has the lowest MAC address.
 ## RSTP Link Types
 - Switch-to-switch links -> Point-to-point
 - Hub-connected link (SW1 F0/24) -> Shared
-Configured with:
+- Configured with:
   - 'spanning-tree link-type point-to-point'
   - 'spanning-tree link-type shared'
-Verified with:
+- Verified with:
   - 'show spanning-tree'
 
 ---
