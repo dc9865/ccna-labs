@@ -1,0 +1,27 @@
+! DSW2
+
+enable
+conf t
+
+! PAgP EtherChannel to ASW2
+interface range g1/0/3-4
+ channel-group 1 mode desirable
+
+interface port-channel 1
+ switchport mode trunk
+
+! Layer 3 EtherChannel to DSW1
+interface range g1/0/1-2
+ no switchport
+ channel-group 2 mode on
+
+interface port-channel 2
+ ip address 10.0.0.2 255.255.255.252
+ 
+ip routing
+
+! Static Route
+ip route 172.16.1.0 255.255.255.0 10.0.0.1
+
+end
+

@@ -1,0 +1,13 @@
+! ASW1
+
+enable
+conf t
+
+! LACP EtherChannel to DSW1
+interface range g0/1-2 
+ channel-group 1 mode active
+
+interface port-channel 1
+ switchport mode trunk
+
+end

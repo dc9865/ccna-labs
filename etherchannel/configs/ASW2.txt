@@ -1,0 +1,13 @@
+! ASW2
+
+enable
+conf t
+
+! PAgP EtherChannel to DSW2
+interface range g0/1-2
+ channel-group 1 mode desirable
+
+interface port-channel 1
+ switchport mode trunk
+
+end
