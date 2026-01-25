@@ -1,0 +1,17 @@
+enable
+conf t
+
+! Link to SW2
+interface f0/1
+ spanning-tree link-type point-to-point
+
+! Link to Hub1
+int range f0/2 - 3
+ spanning-tree link-type shared
+
+! Link to Hub0
+interface f0/24
+ spanning-tree link-type shared
+
+end
+write memory

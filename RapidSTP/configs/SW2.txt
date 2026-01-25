@@ -1,0 +1,21 @@
+enable
+conf t
+
+! Link to SW1
+interface f0/1
+ spanning-tree link-type point-to-point
+
+! Link to SW3
+interface g0/1
+ spanning-tree link-type point-to-point
+
+! Link to SW4
+interface f0/2
+ spanning-tree link-type point-to-point
+
+! Link to PC4 & PC5
+int range f0/23 - 24
+ spanning-tree link-type edge
+
+end
+write memory
