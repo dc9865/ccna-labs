@@ -1,0 +1,12 @@
+en
+conf t
+
+! to PC1 via SPR2
+ip route 10.0.1.0 255.255.255.0 203.0.113.5 111
+
+! Failing the link between R1 and R2 so the floating static routes are used.
+int g0/2/0
+ shutdown
+
+end
+write memory
