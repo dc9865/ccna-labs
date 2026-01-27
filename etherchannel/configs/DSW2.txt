@@ -24,4 +24,5 @@ ip routing
 ip route 172.16.1.0 255.255.255.0 10.0.0.1
 
 end
+write memory
 

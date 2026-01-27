@@ -11,3 +11,4 @@ interface port-channel 1
  switchport mode trunk
 
 end
+write memory
