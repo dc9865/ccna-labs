@@ -19,7 +19,7 @@ This lab examines how floating static routes provide redundancy between enterpri
   - Path: PC1 → R1 → R2 → SRV1
   - Learned via OSPF
 - PC1 → 1.1.1.1
-  - Path: PC1 → R1 → ISPDR1 → Internet
+  - Path: PC1 → R1 → ISPBR1 → Internet
   - Uses default static route
 
 ## Floating Static Routes
