@@ -40,6 +40,6 @@ This lab examines Rapid Spanning Tree Protocol (RSTP) behavior in a multi-switch
 
 ---
 
-## 🔧 Configuration
+## Configuration
 Full device configs are available in the configs folder.
 
