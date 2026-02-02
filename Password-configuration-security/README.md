@@ -18,50 +18,50 @@ This lab focuses on configuring, testing, and securing device passwords on a rou
 
 ## Observations
 1. Change Hostnames
-- Commands:
-  - R1(config)# 'hostname R1'
-  - SW1(config)# 'hostname SW1'
-- Observation: Hostnames updated successfully.
+  - Commands:
+    - R1(config)# 'hostname R1'
+    - SW1(config)# 'hostname SW1'
+  - Observation: Hostnames updated successfully.
 
 2. Configure Unencrypted Enable Password
-- Commands:
-  - R1(config)# enable password CCNA
-  - SW1(config)# enable password CCNA
-- Observation: Devices now require 'CCNA' to enter priviledged EXEC mode.
+  - Commands:
+    - R1(config)# enable password CCNA
+    - SW1(config)# enable password CCNA
+  - Observation: Devices now require 'CCNA' to enter priviledged EXEC mode.
 
 3. Test Password
-- Command: 'enable' in user EXEC mode
-- Observation: Password accepted; user enters privileged EXEC mode.
+  - Command: 'enable' in user EXEC mode
+  - Observation: Password accepted; user enters privileged EXEC mode.
 
 4. View Password in Running Configuration
-- Command: 'service password-encryption'
-- Observation: All unencrpyted passwords are now encrypted in the running configuration.
+  - Command: 'service password-encryption'
+  - Observation: All unencrpyted passwords are now encrypted in the running configuration.
 
 5. Encrypt Passwords
-- Command: 'service password-encryption'
-- Observation: All unencrypted passwords are now encrypted in the running configuration.
+  - Command: 'service password-encryption'
+  - Observation: All unencrypted passwords are now encrypted in the running configuration.
 
 6. View Encrypted Passwords
-- Command: 'show running-config'
-- Observation: Plain text passwords are replaced with type 7 encrypted strings.
+  - Command: 'show running-config'
+  - Observation: Plain text passwords are replaced with type 7 encrypted strings.
 
 7. Configure Secure Encrypted Enable Password
-- Commands: 
-  - R1(config)# enable secret Cisco
-  - SW1(config)# enable secret Cisco
-- Observation: Devices now use a stronger, type 5 encrypted enable secret.
+  - Commands: 
+    - R1(config)# enable secret Cisco
+    - SW1(config)# enable secret Cisco
+  - Observation: Devices now use a stronger, type 5 encrypted enable secret.
 
 8. Verify Password in EXEC mode
-- Command: 'enable'
-- Observation: 'Cisco' must be used to enter privileged EXEC mode after secret configuration.
+  - Command: 'enable'
+  - Observation: 'Cisco' must be used to enter privileged EXEC mode after secret configuration.
 
 9. Check Encryption Types
-- Commands: 'show running-config'
-- Observation:
-  - Enable password: type 7 
-  - Enable secret: type 5
+  - Commands: 'show running-config'
+  - Observation:
+    - Enable password: type 7 
+    - Enable secret: type 5
 
 10. Save Configuration
-- Command: 'copy running-config startup-config'
-- Observation: Configuration saved; persists after reload.
+  - Command: 'copy running-config startup-config'
+  - Observation: Configuration saved; persists after reload.
 
