@@ -1,6 +1,7 @@
-## Overview
+# Day 24 - Floating Static Routing Lab
 
-This lab creates the network diagram based on instructions given. A branch-to-branch network is built using routers, switches, and firewalls, with an internet segment and an external attacker. The focus o this lab is correct topology creation and device placement.
+## Overview
+This lab creates the network diagram based on instructions given. A branch-to-branch network is built using routers, switches, and firewalls, with an internet segment and an external attacker. The focus of this lab is correct topology creation and device placement.
 
 ## Objectives
 - Build the required toplogy in Packet Tracer
@@ -24,6 +25,6 @@ This lab creates the network diagram based on instructions given. A branch-to-br
 
 ## Observations
 - Each branch network is protected by a firewall
-- A firewall can be placed after router and before router. 
+- A firewall can be placed after router and before router 
 - Internet is treated as an untrusted network
 - Internal users and servers are separated by switches
