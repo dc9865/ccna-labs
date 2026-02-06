@@ -56,10 +56,10 @@ This lab demonstrates basic device configuration and interface management in a s
    - Commands used: 'ip address [ip] [subnet]', 'no shutdown' - on a specific interface
 
 3. Set speed, duplex, and descriptions on inter-device interfaces for stability.
-  - Commands used: 'speed [value]', 'duplex [mode]', 'description [text]'
+   - Commands used: 'speed [value]', 'duplex [mode]', 'description [text]'
     
 4. Disabled unused interfaces to improve security.
-  - Command used: 'shutdown'
+   - Command used: 'shutdown'
 
 5. Verified IP addressing and connectivity using ping.
   - Command used: 'ping [ip]'
