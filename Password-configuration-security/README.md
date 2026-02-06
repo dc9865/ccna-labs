@@ -1,4 +1,4 @@
-# Lab 04 - Basic Device Security Configuration Lab
+# Lab 04 - Basic Device Security Lab
 
 ## Overview
 This lab focuses on configuring, testing, and securing device passwords on a router and switch. Users will set unecrypted and encrypted enable passwords, verify password security, and save the configuration to ensure persistence across device reloads.
