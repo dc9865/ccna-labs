@@ -62,7 +62,7 @@ This lab demonstrates basic device configuration and interface management in a s
    - Command used: 'shutdown'
 
 5. Verified IP addressing and connectivity using ping.
-  - Command used: 'ping [ip]'
+   - Command used: 'ping [ip]'
 
 6. Reviewed device configurations using show commands.
    - Commands used: 'show running-config', 'show ip interface brief', 'show interfaces status'
