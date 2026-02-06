@@ -1,4 +1,4 @@
-# Day 24 - Floating Static Routing Lab
+# Lab 24 - Floating Static Routing Lab
 
 ## Overview
 This lab creates the network diagram based on instructions given. A branch-to-branch network is built using routers, switches, and firewalls, with an internet segment and an external attacker. The focus of this lab is correct topology creation and device placement.
