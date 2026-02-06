@@ -38,15 +38,15 @@ This lab demonstrates basic device configuration and interface management in a s
 - Interfaces with manually configured speed and duplex remain stable
 
 ## Verifcation
-Router
-- show ip interface brief
-- show running-config
-Switches
-- show interfaces status
-- show running-config
-PCs
-- ipconfig
-- ping <destination-ip>
+- Router
+  - show ip interface brief
+  - show running-config
+- Switches
+  - show interfaces status
+  - show running-config
+- PCs
+  - ipconfig
+  - ping <destination-ip>
 
 
 
