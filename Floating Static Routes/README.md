@@ -1,3 +1,5 @@
+# Day 24 - Floating Static Routing Lab
+
 ## Overview
 This lab examines how floating static routes provide redundancy between enterprise edge routers. A dynamic routing protocol is used for normal operations, while higher–administrative distance static routes act as backups when the primary link fails.
 
