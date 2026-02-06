@@ -46,7 +46,26 @@ This lab demonstrates basic device configuration and interface management in a s
   - show running-config
 - PCs
   - ipconfig
-  - ping <destination-ip>
+  - ping destination-ip
+ 
+## Procedure Summary
+1. Configured hostnames on R1, SW1, and SW2.
+   - Command used: 'hostname [name]'
+  
+2. Assigned IP addresses to R1 and all PCs, and enabled router interfaces.
+   - Commands used: 'ip address [ip] [subnet]', 'no shutdown' - on a specific interface
+
+3. Set speed, duplex, and descriptions on inter-device interfaces for stability.
+  - Commands used: 'speed [value]', 'duplex [mode]', 'description [text]'
+    
+4. Disabled unused interfaces to improve security.
+  - Command used: 'shutdown'
+
+5. Verified IP addressing and connectivity using ping.
+  - Command used: 'ping [ip]'
+
+6. Reviewed device configurations using show commands.
+   - Commands used: 'show running-config', 'show ip interface brief', 'show interfaces status'
 
 
 
