@@ -1,3 +1,5 @@
+# Lab 2 - Connecting Devices Lab
+
 ## Overview 
 This lab focuses on connecting network devices according to labeled distances and selecting the appropriate cable types. Auto-MDIX is assumed to be disabled, requiring manual consideration of straight-through, crossover, and fiber connections. The toplogy includes multiple routers, swithces, end hosts, and a server distributed across two sites.
 
