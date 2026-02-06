@@ -33,7 +33,7 @@ This lab demonstrates how Address Resolution Protocol (ARP) and MAC address lear
 - ARP Replies are unicast frames
 - Switches learn MAC addresses from source MAC fields
 
-## Verification Commands
+## Verification
 - On switches:
   - 'show mac address-table'
 - To clear dynamic MAC addresses:
