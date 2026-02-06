@@ -1,3 +1,5 @@
+# Lab 06 - Ethernet LAN Switching Lab
+
 ## Overview
 This lab demonstrates how Address Resolution Protocol (ARP) and MAC address learning operate in a multi-switch topology. The behavior of ARP requests, ARP replies, and ICMP traffic is analyzed when end devices initially have empty ARP tables and switches have empty MAC address tables. 
 
