@@ -1,4 +1,4 @@
-# Day 22 - Rapid Spanning Tree Protocol (RSTP) Lab
+# Lab 22 - Rapid Spanning Tree Protocol (RSTP) Lab
 
 ## Overview
 This lab examines Rapid Spanning Tree Protocol (RSTP) behavior in a multi-switch topology. The root bridge is identified, port roles and states are analyzed, and RSTP link types are manually configured.
