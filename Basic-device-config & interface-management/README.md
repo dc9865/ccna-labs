@@ -1,4 +1,4 @@
-## Basic Device Configuration and Interface Management Lab
+# Basic Device Configuration and Interface Management Lab
 
 ## Overview
 This lab demonstrates basic device configuration and interface management in a small routed and switched network. I configured hostnames, IP addressing, interface speed and duplex, interface descriptions, and administratively disabled unused interfaces. The lab focuses on establishing correct Layer 1-3 connectivity and validating communication between hosts in a single subnet.
