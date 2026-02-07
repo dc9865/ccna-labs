@@ -1,0 +1,60 @@
+# Lab 11 (Part 2) - Static Routing Troubleshooting Between Multiple Routers
+
+## Overview
+This lab focuses on troubleshooting static routing issues in a multi-router environment. The network topology consists of three routers connecting two separate LANs. Each router contains one misconfiguration that prevents end-to-end connectivity. By identifying and correcting these issues, static routing is restored and successful communication between PC1 and PC2 is achieved.
+
+## Objectives
+- Understand static routing behavior across multiple routers
+- Identify and fix common router misconfigurations
+- Verify IP addressing and interface configurations
+- Validate static routes and routing tables
+- Confirm end-to-end connectivity using ping
+
+## Toplogy Summary
+- 3 Cisco 2911 routers (R1,R2,R3)
+- 2 Cisco 2960-24TT switches (SW1 and SW2)
+- 2 PCs (PC1 and PC2) located in different networks
+- Multiple routed networks interconnected using Gigabit Ethernet links
+
+## Network Segments
+- 192.168.1.0/24 - PC1 LAN
+- 192.168.12.0/24 - R1 <-> R2 link
+- 192.168.13.0/24 - R2 <-> R3 link
+- 192.168.3.0/24 - PC2 LAN
+
+## Initial Conditions
+- All devices were powered on
+- IP addressing was partially configured
+- One misconfiguration existed on each router
+- Static routes were incorrect or incomplete
+- PC1 and PC2 were unable to ping each other
+
+## Traffic Flow (PC1 Ping PC2)
+1. PC1 sends an ICMP Echo Request to PC2.
+2. PC1 forwardsd the packet to its default gateway (R1).
+3. R1 forwards the packet to R2 using a corrected static route.
+4. R2 forwards the packet to R3 after fixing its routing/interface issue.
+5. R3 forwards the packet to PC2's local network.
+6. PC2 responds with an ICMP Echo Reply, which travels back through R3 -> R2 -> R1 to PC1.
+
+## Observations
+- A single incorrect static route can break end-to-end connectivity
+- Routers only forward traffic to known networks in their routing table
+- Interface misconfigurations can prevent routes from functioning correctly
+- Connectivity is restored only when all routing and interface issues are resolved
+
+## Verification
+1. Routers:
+  - show ip route
+  - show ip interface brief
+2. PCs:
+  - ipconfig
+  - ping [destination-ip]
+
+## Procedure Summary
+- Reviewed IP addressing and interface status on all routers.
+- Identified and corrected one misconfiguration on each router.
+- Verified interface configurations and ensured all required interfaces were up
+- Fixed static routes to properly reach remote networks
+- Confirmed routing table accuracy using show commands
+- Successfully verified end-to-end connectivity between PC1 and PC2 using ping
