@@ -28,9 +28,12 @@ All subnets utilize a /26 mask (255.255.255.192), providing 62 usable host addre
 
 ## Configuration Highlights
 Switch (SW1)
-- Created VLANS 10, 20, and 30 with appropriate names.
-- Assigned PC ports (F3/1, F4/1, etc.) to their respective access VLANs.
-- Crucial Step: Assigned the uplink ports connected to R1 (G0/1, G1/1, G2/1) to their respective VLANS to allow the router to sit inside each subnet.
+- Created and named VLANs 10 (Engineering), 20 (HR), and 30 (Sales).
+- Assigned all departmental interfaces to their respective access VLANs.
+  - VLAN 10: PC ports (F3/1, F4/1) and Router uplink (G0/1).
+  - VLAN 20: PC ports (F5/1, F6/1) and Router uplink (G1/1).
+  - VLAN 30: PC ports (F7/1, F8/1) and Router uplink (G2/1).
+- By placing the router's physical interfaces into the same access VLANs as the PCs, each interface effectively joins into the correct broadcast domain to serve as the default gateway.
 
 Router (R1)
 - Interface G0/0: Assigned 10.0.0.62 (Gateway for Engineering)
