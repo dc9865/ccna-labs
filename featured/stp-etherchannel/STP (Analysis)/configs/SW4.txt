@@ -1,0 +1,3 @@
+hostname SW4
+
+spanning-tree mode pvst

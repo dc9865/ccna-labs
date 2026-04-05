@@ -1,0 +1,11 @@
+hostname R1
+
+interface g0/1
+ ip nat inside
+
+interface g0/0
+ ip nat outside
+
+ip nat inside source static 172.16.0.1 100.0.0.1
+ip nat inside source static 172.16.0.2 100.0.0.2
+ip nat inside source static 172.16.0.3 100.0.0.3

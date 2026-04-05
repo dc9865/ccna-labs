@@ -1,0 +1,7 @@
+hostname R2
+
+interface g0/0
+ standby version 2
+ standby 1 ip 10.0.1.254
+ standby 1 priority 90
+ standby 1 preempt

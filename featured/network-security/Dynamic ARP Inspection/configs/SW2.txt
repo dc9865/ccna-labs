@@ -1,0 +1,10 @@
+hostname SW2
+
+ip dhcp snooping
+ip dhcp snooping vlan 1
+ip arp inspection vlan 1
+ip arp inspection validate src-mac dst-mac ip
+
+interface g0/1
+ ip dhcp snooping trust
+ ip arp inspection trust

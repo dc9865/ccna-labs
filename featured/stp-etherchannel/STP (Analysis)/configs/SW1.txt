@@ -1,0 +1,3 @@
+hostname SW1
+
+spanning-tree mode pvst

@@ -1,0 +1,19 @@
+hostname R1
+
+interface g0/1
+ ip nat inside
+
+interface g0/0
+ ip nat outside
+
+access-list 1 permit 172.16.0.0 0.0.0.255
+
+ip nat pool NATPOOL 100.0.0.1 100.0.0.2 netmask 255.255.255.0
+
+ip nat inside source list 1 pool NATPOOL
+
+! After step 3 → PAT
+no ip nat inside source list 1 pool NATPOOL
+clear ip nat translation *
+
+ip nat inside source list 1 interface g0/0 overload

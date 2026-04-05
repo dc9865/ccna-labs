@@ -1,0 +1,13 @@
+hostname R1
+
+clock set 12:00:00 Dec 30 2020
+clock timezone EST -5
+
+ntp server 1.1.1.1
+ntp master 8
+
+ntp authenticate
+ntp authentication-key 1 md5 cisco
+ntp trusted-key 1
+
+ntp update-calendar

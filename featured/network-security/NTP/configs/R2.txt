@@ -1,0 +1,11 @@
+hostname R2
+
+clock set 12:00:00 Dec 30 2020
+clock timezone EST -5
+
+ntp authenticate
+ntp authentication-key 1 md5 cisco
+ntp trusted-key 1
+ntp server 192.168.12.1 key 1
+
+ntp update-calendar

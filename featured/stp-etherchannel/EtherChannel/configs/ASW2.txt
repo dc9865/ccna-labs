@@ -1,14 +1,7 @@
-! ASW2
+hostname ASW2
 
-enable
-conf t
+interface range g0/1 - 2
+ channel-group 2 mode desirable
 
-! PAgP EtherChannel to DSW2
-interface range g0/1-2
- channel-group 1 mode desirable
-
-interface port-channel 1
+interface port-channel 2
  switchport mode trunk
-
-end
-write memory

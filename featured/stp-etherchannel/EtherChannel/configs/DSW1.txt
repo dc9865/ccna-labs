@@ -1,27 +1,21 @@
-! DSW1
+hostname DSW1
 
-enable
-conf t
+ip routing
 
-! LACP EtherChannel to ASW1
-interface range g1/0/3-4
+interface range g1/0/3 - 4
  channel-group 1 mode active
 
 interface port-channel 1
  switchport mode trunk
 
-! Layer 3 EtherChannel to DSW2
-interface range g1/0/1-2
+interface range g1/0/1 - 2
  no switchport
- channel-group 2 mode on
+ channel-group 10 mode on
 
-interface port-channel 2
+interface port-channel 10
+ no switchport
  ip address 10.0.0.1 255.255.255.252
- 
-ip routing
 
-! Static Route
 ip route 172.16.2.0 255.255.255.0 10.0.0.2
 
-end
-write memory
+port-channel load-balance src-dst-ip

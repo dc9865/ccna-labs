@@ -1,0 +1,18 @@
+hostname R1
+
+ip access-list extended VLAN10_POLICY
+ deny udp 172.16.1.0 0.0.0.255 host 192.168.1.100 eq 53
+ deny tcp 172.16.1.0 0.0.0.255 host 192.168.1.100 eq 53
+ permit ip any any
+
+ip access-list extended VLAN20_POLICY
+ deny ip 172.16.2.0 0.0.0.255 host 172.16.1.1
+ deny tcp 172.16.2.0 0.0.0.255 host 192.168.2.100 eq 80
+ deny tcp 172.16.2.0 0.0.0.255 host 192.168.2.100 eq 443
+ permit ip any any
+
+interface g0/0
+ ip access-group VLAN10_POLICY in
+
+interface g0/1
+ ip access-group VLAN20_POLICY in

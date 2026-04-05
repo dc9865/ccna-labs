@@ -1,17 +1,9 @@
-enable
-conf t
+hostname SW4
 
-! Link to SW2
-interface f0/2
- spanning-tree link-type point-to-point
+spanning-tree mode rapid-pvst
 
-! Link to SW3
 interface f0/1
  spanning-tree link-type point-to-point
 
-! Link to PC6
-interface f0/24
- spanning-tree link-type edge
-
-end
-write memory
+interface f0/2
+ spanning-tree link-type point-to-point

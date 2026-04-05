@@ -1,0 +1,7 @@
+hostname R1
+
+interface g0/0
+ ip address 10.0.0.194 255.255.255.252
+ no shutdown
+
+ip route 10.0.0.0 255.255.255.0 10.0.0.193

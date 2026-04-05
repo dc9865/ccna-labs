@@ -1,0 +1,8 @@
+hostname SW1
+
+spanning-tree mode pvst
+spanning-tree vlan 1 root primary
+spanning-tree vlan 2 root secondary
+
+interface f0/1
+ spanning-tree vlan 1 port-priority 240

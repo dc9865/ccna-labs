@@ -1,0 +1,14 @@
+hostname DSW1
+
+spanning-tree vlan 10 root primary
+spanning-tree vlan 20 root secondary
+
+interface vlan 10
+ standby 10 ip 10.0.10.254
+ standby 10 priority 110
+ standby 10 preempt
+
+interface vlan 20
+ standby 20 ip 10.0.20.254
+ standby 20 priority 90
+ standby 20 preempt

@@ -1,0 +1,10 @@
+hostname SW4
+
+spanning-tree mode pvst
+
+interface f0/2
+ spanning-tree vlan 1 cost 100
+
+interface f0/3
+ spanning-tree portfast
+ spanning-tree bpduguard enable

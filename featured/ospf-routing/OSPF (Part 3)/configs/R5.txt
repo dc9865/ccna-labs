@@ -1,0 +1,5 @@
+router ospf 1
+ no passive-interface g0/0
+ default-information originate
+
+ip route 0.0.0.0 0.0.0.0 203.0.113.2

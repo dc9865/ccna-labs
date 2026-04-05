@@ -1,21 +1,12 @@
-enable
-conf t
+hostname SW3
 
-! Link to Hub1
-interface f0/2
- spanning-tree link-type shared
+spanning-tree mode rapid-pvst
 
-! Link to SW2
-interface g0/1
- spanning-tree link-type point-to-point
-
-! Link to SW4
 interface f0/1
  spanning-tree link-type point-to-point
 
-! Link to PC3
-interface f0/24
- spanning-tree link-type edge
+interface f0/2
+ spanning-tree link-type shared
 
-end
-write memory
+interface g0/1
+ spanning-tree link-type point-to-point

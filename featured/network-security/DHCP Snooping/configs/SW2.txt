@@ -1,0 +1,7 @@
+hostname SW2
+
+ip dhcp snooping
+ip dhcp snooping vlan 1
+
+interface g0/1
+ ip dhcp snooping trust
