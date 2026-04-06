@@ -1,0 +1,21 @@
+hostname R2
+
+ip dhcp excluded-address 192.168.1.1 192.168.1.10
+ip dhcp excluded-address 192.168.2.1 192.168.2.10
+ip dhcp excluded-address 203.0.113.1
+
+ip dhcp pool POOL1
+ network 192.168.1.0 255.255.255.0
+ default-router 192.168.1.1
+ dns-server 8.8.8.8
+ domain-name jeremysitlab.com
+
+ip dhcp pool POOL2
+ network 192.168.2.0 255.255.255.0
+ default-router 192.168.2.1
+ dns-server 8.8.8.8
+ domain-name jeremysitlab.com
+
+ip dhcp pool POOL3
+ network 203.0.113.0 255.255.255.252
+ default-router 203.0.113.1
