@@ -91,5 +91,3 @@ This lab demonstrates advanced Layer 2 switching concepts including EtherChannel
 - **STP** prevents loops and controls traffic paths  
 - **Per-VLAN root tuning** enables load balancing  
 - **RSTP** improves convergence speed  
-
-These concepts reflect real-world enterprise switching design.
