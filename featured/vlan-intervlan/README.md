@@ -1,93 +1,103 @@
-# EtherChannel & STP Advanced Switching Lab
+# VLAN & Inter-VLAN Routing Lab
 
-This lab demonstrates advanced Layer 2 switching concepts including EtherChannel (LACP/PAgP/static), STP, RSTP, and Layer 3 EtherChannel routing in a redundant multi-switch topology.
+This lab demonstrates VLAN segmentation, trunking, router-on-a-stick (ROAS), and multilayer switching in a progressive enterprise topology.
 
 ---
 
 ## 📚 Lab Breakdown
 
-### 🔹 Part 1 – EtherChannel Configuration (L2 & L3)
+### 🔹 Part 1 – VLAN Configuration
 
-- Configured **L2 EtherChannel (LACP & PAgP)** between access and distribution switches  
-- Configured **L3 EtherChannel (static)** between distribution switches  
-- Enabled trunking on port-channels  
-- Assigned IP addresses to routed port-channel interfaces  
-- Verified connectivity between VLAN networks and server  
+- Created VLANs:
+  - Engineering  
+  - HR  
+  - Sales  
 
----
-
-### 🔹 Part 2 – STP Analysis & Optimization
-
-- Identified **root bridge** (priority + MAC)  
-- Verified port roles:
-  - Root, Designated, Blocking  
-
-- Analyzed topology behavior:
-  - Impact of **shared (hub) vs point-to-point links**  
-  - Path selection based on cost  
-
-- Optimized STP per VLAN:
-  - SW1 → root for VLAN1  
-  - SW2 → root for VLAN2  
-
-- Tuned path selection:
-  - **Interface cost**
-  - **Port priority**
-
-- Implemented **load balancing** across redundant links  
-
-- Enabled **PortFast + BPDU Guard** on access ports  
+- Assigned switch ports to correct VLANs  
+- Configured PC IP addressing with **last usable IP as default gateway**  
+- Configured separate physical router interfaces as gateways (one per VLAN)  
+- Established one physical connection per VLAN between SW1 and R1  
+- Verified connectivity and broadcast isolation  
 
 ---
 
-### 🔹 Part 3 – RSTP Link Types & Behavior
+### 🔹 Part 2 – VLAN Trunking & Router-on-a-Stick
 
-- Verified RSTP roles:
-  - Root, Designated, Alternate  
+- Configured trunk link between switches:
+  - Allowed VLANs only  
+  - Set unused native VLAN  
 
-- Identified link types:
-  - Point-to-point  
-  - Shared  
+- Ensured VLAN consistency across switches  
 
-- Configured link types manually  
-- Observed faster convergence vs STP  
+- Implemented **ROAS**:
+  - Configured router subinterfaces  
+  - Assigned gateway IPs per VLAN  
+
+- Verified inter-VLAN connectivity  
+
+---
+
+### 🔹 Part 3 – Multilayer Switching
+
+- Replaced ROAS with **Layer 3 switching**  
+
+- Configured:
+  - SVIs for each VLAN (gateway IPs)  
+  - Configured point-to-point Layer 3 link between switch and router  
+  - Default route on L3 switch  
+
+- Verified:
+  - Inter-VLAN routing via SVIs  
+  - External connectivity  
 
 ---
 
 ## 🧠 Key Concepts Demonstrated
 
-- EtherChannel (LACP, PAgP, static)
-- L2 vs L3 EtherChannel
-- STP root election and port roles
-- Per-VLAN STP load balancing
-- Cost vs port priority (STP)
-- RSTP link types and fast convergence
-- PortFast and BPDU Guard
+- VLAN segmentation and port assignment  
+- Access vs trunk configuration  
+- Native VLAN and allowed VLAN control  
+- Router-on-a-stick (ROAS)  
+- Multilayer switching with SVIs  
+- Default gateway design  
+- Layer 2 → Layer 3 transition  
+
+---
+
+## ⚙️ Technologies Used
+
+- VLANs (802.1Q)  
+- Trunking  
+- Router-on-a-stick  
+- Multilayer switching  
+- Static routing  
+- Cisco IOS CLI  
 
 ---
 
 ## ✅ Validation
 
-- `show etherchannel summary`
-- `show spanning-tree`
-- `show interfaces trunk`
-- `show ip route`
-- End-to-end ping tests  
+- `show vlan brief`  
+- `show interfaces trunk`  
+- `show ip route`  
+- Inter-VLAN ping tests  
+- Verified external connectivity (ping 1.1.1.1)
 
 ---
 
 ## 🔍 Troubleshooting Performed
 
-- Verified EtherChannel consistency (mode mismatch issues)
-- Identified STP root bridge using `show spanning-tree`
-- Analyzed blocked ports and path selection
-- Adjusted cost/priority to influence traffic flow
+- Verified VLAN membership and trunk consistency  
+- Identified missing VLANs across switches  
+- Validated ROAS subinterface configuration  
+- Confirmed routing using `show ip route`  
+
+---
 
 ## 📌 Key Takeaway
 
-- **EtherChannel** increases bandwidth and redundancy  
-- **STP** prevents loops and controls traffic paths  
-- **Per-VLAN root selection** enables load balancing  
-- **RSTP** improves convergence speed  
+- **VLANs** segment broadcast domains  
+- **ROAS** enables inter-VLAN routing via a router  
+- **Multilayer switching** provides scalable, high-performance routing  
 
-These concepts reflect real-world enterprise switching design.
+This lab demonstrates the evolution from **Layer 2 segmentation to Layer 3 switching in enterprise networks**.
