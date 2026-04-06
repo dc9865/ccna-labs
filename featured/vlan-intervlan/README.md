@@ -64,17 +64,6 @@ This lab demonstrates VLAN segmentation, trunking, router-on-a-stick (ROAS), and
 
 ---
 
-## ⚙️ Technologies Used
-
-- VLANs (802.1Q)  
-- Trunking  
-- Router-on-a-stick  
-- Multilayer switching  
-- Static routing  
-- Cisco IOS CLI  
-
----
-
 ## ✅ Validation
 
 - `show vlan brief`  
